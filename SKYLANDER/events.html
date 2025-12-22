@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skylander | Events</title>
-  <link rel="stylesheet" href="events.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -23,13 +23,29 @@
         </div>
       </a>
 
-      <div class="site-nav__menu">
-        <a href="index.html" class="nav-link">HOME</a>
-        <a href="sports.html" class="nav-link">SPORT</a>
+      <div class="site-nav__menu desktop-only">
+        <a href="index.html" class="nav-link ">HOME</a>
+        <a href="sports.html" class="nav-link ">SPORT</a>
         <a href="events.html" class="nav-link btn-highlight">EVENTS</a>
-        <a href="contact.html" class="nav-link">CONTACT</a>
+        <a href="contact.html" class="nav-link ">CONTACT</a>
+      </div>
+
+      <div class="navcollapse">
+        <div id="nav-icon">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </nav>
+
+    <div class="menu_mobile">
+      <ul class="menu_mobile_nav">
+        <li class="item"><a href="index.html"><span>HOME</span></a></li>
+        <li class="item"><a href="sports.html"><span>SPORTS</span></a></li>
+        <li class="item"><a href="events.html"><span>EVENTS</span></a></li>
+        <li class="item"><a href="contact.html"><span>CONTACT</span></a></li>
+      </ul>
+    </div>
   </header>
 
   <section class="events-hero">
@@ -69,7 +85,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">ALEIZ SANCHEZ</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir" /></a>
         </div>
       </div>
 
@@ -80,7 +95,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">PEDRO XIMENEZ</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir" /></a>
         </div>
       </div>
 
@@ -91,7 +105,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">JUAN GARCIA</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir" /></a>
         </div>
       </div>
     </div>
@@ -122,12 +135,10 @@
       </div>
     </div>
 
-    <div class="separator-deco" style="text-align: center; margin: 80px 0;">
-      <img src="assets/img/rebar-Photoroom_17_11zon.webp" alt="Separador" style="width: 100%; max-width: 600px; opacity: 0.9;">
-    </div>
+  
 
-    <div class="directive-header" style="text-align: center; margin-bottom: 60px;">
-      <h2 class="hall-title" style="font-family: 'Orbitron', sans-serif; font-size: 45px; color: #fff;">DIRECTIVE TEAM
+    <div class="directive-header">
+      <h2 class="hall-title">DIRECTIVE TEAM
       </h2>
     </div>
 
@@ -139,7 +150,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">DAVID BISBAL</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir" /></a>
         </div>
       </div>
 
@@ -150,7 +160,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">DIEGO PEREZ</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir" /></a>
         </div>
       </div>
 
@@ -161,7 +170,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">SANCHO PEREZ</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir" /></a>
         </div>
       </div>
     </div>
@@ -216,7 +224,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">SEBASTIAN YATRA</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir"></a>
         </div>
       </div>
 
@@ -227,7 +234,6 @@
         </div>
         <div class="card__footer">
           <span class="card__name">JORGE MOLES</span>
-          <a href="#" class="card__btn"><img src="assets/img/flechablanca_72_11zon.webp" alt="Ir"></a>
         </div>
       </div>
     </div>
@@ -380,6 +386,7 @@
     </div>
 
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,276 +1,300 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skylander | Home</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&family=Orbitron:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="home-page">
-    <header class="home-hero">
-      <nav class="site-nav">
-        <a href="index.html" class="site-nav__brand">
-          <img
-            src="assets/img/logoblanco_7_11zon.webp"
-            alt="Logo"
-            class="site-nav__logo"
-          />
-          <div class="brand-text">
-            <span class="site-nav__word">SKYLANDER</span>
-          </div>
-        </a>
 
-        <div class="site-nav__menu">
-          <a href="index.html" class="nav-link btn-highlight">HOME</a>
-          <a href="sports.html" class="nav-link">SPORT</a>
-          <a href="events.html" class="nav-link">EVENTS</a>
-          <a href="contact.html" class="nav-link">CONTACT</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skylander | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="home-page">
+  <header class="home-hero">
+    <nav class="site-nav">
+      <a href="index.html" class="site-nav__brand">
+        <img src="assets/img/logoblanco_7_11zon.webp" alt="Logo" class="site-nav__logo" />
+        <div class="brand-text">
+          <span class="site-nav__word">SKYLANDER</span>
         </div>
-      </nav>
+      </a>
 
-      <div class="hero-layer layer-bg">
-        <img src="assets/img/fondoHome_73_11zon.webp" alt="Fondo Cielo" />
+      <div class="site-nav__menu desktop-only">
+        <a href="index.html" class="nav-link btn-highlight">HOME</a>
+        <a href="sports.html" class="nav-link ">SPORT</a>
+        <a href="events.html" class="nav-link">EVENTS</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
       </div>
 
-      <div class="hero-layer layer-text-back">
-        <h1 class="giant-text filled">SKYLANDER</h1>
-        <p class="hero-subtitle">Prove your faith</p>
+      <div class="navcollapse">
+        <div id="nav-icon">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu_mobile">
+      <ul class="menu_mobile_nav">
+        <li class="item"><a href="index.html"><span>HOME</span></a></li>
+        <li class="item"><a href="sports.html"><span>SPORTS</span></a></li>
+        <li class="item"><a href="events.html"><span>EVENTS</span></a></li>
+        <li class="item"><a href="contact.html"><span>CONTACT</span></a></li>
+      </ul>
+    </div>
+  
+
+  <div class="hero-layer layer-bg">
+    <img src="assets/img/fondoHome_73_11zon.webp" alt="Fondo Cielo" />
+  </div>
+
+  <div class="hero-layer layer-text-back">
+    <h1 class="giant-text filled">SKYLANDER</h1>
+    <p class="hero-subtitle">Prove your faith</p>
+  </div>
+
+  <div class="hero-layer layer-image">
+    <img src="assets/img/noFOndoHome_10_11zon.webp" alt="Skydivers" />
+  </div>
+
+  <div class="hero-layer layer-text-front">
+    <h1 class="giant-text outline">SKYLANDER</h1>
+  </div>
+
+  <div class="hero-layer layer-ui">
+    <a href="sports.html" class="btn-explore">EXPLORE</a>
+  </div>
+  </header>
+
+  <section class="mountain-section">
+    <h2 class="section-title">OUR TRACKS</h2>
+
+
+    <div class="accordion-container">
+
+      <div class="accordion-card">
+        <img src="assets/img/track.webp" class="card-img" alt="Snow" />
+        <div class="card-content">
+          <h3>SNOW</h3>
+          <p>NATURE</p>
+          <a href="sports.html#skydive" class="card-btn">VIEW SPORT</a>
+        </div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="accordion-card">
+        <img src="assets/img/track2_26_11zon.webp" class="card-img" alt="Snow" />
+        <div class="card-content">
+          <h3>SNOW</h3>
+          <p>NATURE</p>
+          <a href="sports.html#skydive" class="card-btn">VIEW SPORT</a>
+        </div>
+        <div class="card-overlay"></div>
+      </div>
+      <div class="accordion-card">
+        <img src="assets/img/track3_27_11zon.webp" class="card-img" alt="Climb" />
+        <div class="card-content">
+          <h3>CLIMB</h3>
+          <p>ADVENTURE</p>
+          <a href="sports.html#paragliding" class="card-btn">VIEW SPORT</a>
+        </div>
+        <div class="card-overlay"></div>
       </div>
 
-      <div class="hero-layer layer-image">
-        <img src="assets/img/noFOndoHome_10_11zon.webp" alt="Skydivers" />
+      <div class="accordion-card">
+        <img src="assets/img/track4_28_11zon.webp" class="card-img" alt="Peaks" />
+        <div class="card-content">
+          <h3>PEAKS</h3>
+          <p>VIEWS</p>
+          <a href="sports.html#wingsuit" class="card-btn">VIEW SPORT</a>
+        </div>
+        <div class="card-overlay"></div>
       </div>
 
-      <div class="hero-layer layer-text-front">
-        <h1 class="giant-text outline">SKYLANDER</h1>
+    </div>
+  </section>
+  <section class="gear-section">
+
+    <div class="bg-text-pattern">
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+    </div>
+
+    <div class="gear-container">
+
+      <div class="gear-orb item-helmet">
+        <div class="orb-grid"></div>
+        <img src="assets/img/casco.webp" alt="Helmet" />
       </div>
 
-      <div class="hero-layer layer-ui">
-        <a href="sports.html" class="btn-explore">EXPLORE</a>
-      </div>
-    </header>
-
-    <section class="mountain-section">
-      <h2 class="section-title">OUR TRACKS</h2>
-
-
-      <div class="accordion-container">
-        
-        <div class="accordion-card">
-          <img src="assets/img/track.webp" class="card-img" alt="Snow" />
-          <div class="card-content">
-            <h3>SNOW</h3>
-            <p>NATURE</p>
-            <a href="sports.html#skydive" class="card-btn">VIEW SPORT</a>
-          </div>
-          <div class="card-overlay"></div>
-        </div>
-        <div class="accordion-card">
-          <img src="assets/img/track2_26_11zon.webp" class="card-img" alt="Snow" />
-          <div class="card-content">
-            <h3>SNOW</h3>
-            <p>NATURE</p>
-            <a href="sports.html#skydive" class="card-btn">VIEW SPORT</a>
-          </div>
-          <div class="card-overlay"></div>
-        </div>
-        <div class="accordion-card">
-          <img src="assets/img/track3_27_11zon.webp" class="card-img" alt="Climb" />
-          <div class="card-content">
-            <h3>CLIMB</h3>
-            <p>ADVENTURE</p>
-            <a href="sports.html#paragliding" class="card-btn">VIEW SPORT</a>
-          </div>
-          <div class="card-overlay"></div>
-        </div>
-
-        <div class="accordion-card">
-          <img src="assets/img/track4_28_11zon.webp" class="card-img" alt="Peaks" />
-          <div class="card-content">
-            <h3>PEAKS</h3>
-            <p>VIEWS</p>
-            <a href="sports.html#wingsuit" class="card-btn">VIEW SPORT</a>
-          </div>
-          <div class="card-overlay"></div>
-        </div>
-
-      </div>
-    </section>
-   <section class="gear-section">
-      
-      <div class="bg-text-pattern">
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER 
-        SKYLANDER SKYLANDER SKYLANDER SKYLANDER SKYLANDER
+      <div class="gear-orb item-suit-icon">
+        <div class="orb-grid"></div>
+        <img src="assets/img/chaqueta.webp" alt="Suit Icon" />
       </div>
 
-      <div class="gear-container">
-        
-        <div class="gear-orb item-helmet">
-          <div class="orb-grid"></div>
-          <img src="assets/img/casco.webp" alt="Helmet" />
-        </div>
-
-        <div class="gear-orb item-suit-icon">
-          <div class="orb-grid"></div>
-          <img src="assets/img/chaqueta.webp" alt="Suit Icon" />
-        </div>
-
-        <div class="gear-orb item-harness">
-          <div class="orb-grid"></div>
-          <img src="assets/img/mochila_9_11zon.webp" alt="Harness" />
-        </div>
-
-        <div class="gear-orb item-boots">
-          <div class="orb-grid"></div>
-          <img src="assets/img/botas.webp" alt="Boots" />
-        </div>
-
-        <div class="center-card">
-          <div class="card-frame">
-            <img src="assets/img/c32b5aeeffa24ee23feb761208ba7672-Photoroom_55_11zon.webp" alt="Red Wingsuit">
-          </div>
-          
-          <div class="decor-block top-left"></div>
-          <div class="decor-block bottom-right"></div>
-          
-        </div>
-
-        <div class="red-line line-1"></div>
-        <div class="red-line line-2"></div>
-        <div class="red-line line-3"></div>
-        <div class="red-line line-4"></div>
-
-
-      </div>
-    </section>
-    <section class="instructor-section">
-      
-      <video muted loop playsinline controls class="bg-video" poster="assets/img/unnamed (3).webp (3).webp">
-        <source src="assets/video/Saltar de un Avión con Paracaídas - Barcelona.mp4" type="video/mp4">
-        Tu navegador no soporta video HTML5.
-      </video>
-
-      <div class="overlay-container">
-        
-        <div class="left-zone">
-          <h2 class="giant-title">
-            WINGSUIT<br>
-            <span class="light-weight">FLYER</span>
-          </h2>
-        </div>
-
-        <div class="right-panel-solid">
-          <div class="content-box">
-            <p>
-              He specializes in teaching advanced wingsuit skills, including glide-path optimization, proximity awareness, aerodynamic efficiency, and safe deployment transitions. Students under his guidance learn how to maintain precise control at high speeds.
-            </p>
-            <p>
-              His instructional approach blends technical detail with practical, scenario-based training. Calm, knowledgeable, and highly observant, he is the type of instructor who supports each student’s progression while emphasizing risk management.
-            </p>
-            
-            <a href="contact.html" class="btn-explore">EXPLORE</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="active-jumps-section">
-      
-      <div class="tech-header">
-        
-        <h2>ACTIVE JUMPS</h2>
-        
+      <div class="gear-orb item-harness">
+        <div class="orb-grid"></div>
+        <img src="assets/img/mochila_9_11zon.webp" alt="Harness" />
       </div>
 
-      <div class="jumps-container-border">
-        
-        <article class="jump-zone">
-          <h3 class="zone-title">ZONE 01 - INITIATION</h3>
-          <div class="zone-img">
-            <img src="assets/img/cae3.webp" alt="Initiation Jump">
-          </div>
-          <p class="zone-desc">
-            This zone is reserved for the ultimate descent. We execute high-altitude freefalls from 15,000 feet, where the air is thinner and the silence is absolute. Experience the raw, 60-second power of terminal velocity before the canopy deployment.
+      <div class="gear-orb item-boots">
+        <div class="orb-grid"></div>
+        <img src="assets/img/botas.webp" alt="Boots" />
+      </div>
+
+      <div class="center-card">
+        <div class="card-frame">
+          <img src="assets/img/c32b5aeeffa24ee23feb761208ba7672-Photoroom_55_11zon.webp.webp" alt="Red Wingsuit">
+        </div>
+
+        <div class="decor-block top-left"></div>
+        <div class="decor-block bottom-right"></div>
+
+      </div>
+
+      <div class="red-line line-1"></div>
+      <div class="red-line line-2"></div>
+      <div class="red-line line-3"></div>
+      <div class="red-line line-4"></div>
+
+
+    </div>
+  </section>
+  <section class="instructor-section">
+
+    <video muted loop playsinline controls class="bg-video" poster="assets/img/unnamed (3).webp (3).webp">
+      <source src="assets/video/Saltar de un Avión con Paracaídas - Barcelona.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+
+    <div class="overlay-container">
+
+      <div class="left-zone">
+        <h2 class="giant-title">
+          WINGSUIT<br>
+          <span class="light-weight">FLYER</span>
+        </h2>
+      </div>
+
+      <div class="right-panel-solid">
+        <div class="content-box">
+          <p>
+            He specializes in teaching advanced wingsuit skills, including glide-path optimization, proximity awareness,
+            aerodynamic efficiency, and safe deployment transitions. Students under his guidance learn how to maintain
+            precise control at high speeds.
           </p>
-          <a href="sports.html#skydive" class="btn-mini-explore">EXPLORE</a>
-        </article>
-
-        <article class="jump-zone">
-          <h3 class="zone-title">ZONE 02 - VELOCITY</h3>
-          <div class="zone-img">
-            <img src="assets/img/cae4.webp" alt="Velocity Jump">
-          </div>
-          <p class="zone-desc">
-            Beyond the freefall, this is the realm of aerodynamic control. Disciplines here, such as Wingsuit and high-performance Canopy Flight, are about transforming vertical speed into horizontal travel.
-          </p>
-          <a href="sports.html#wingsuit" class="btn-mini-explore">EXPLORE</a>
-        </article>
-
-        <article class="jump-zone">
-          <h3 class="zone-title">ZONE 03 - TERMINAL</h3>
-          <div class="zone-img">
-            <img src="assets/img/cae5.webp" alt="Terminal Jump">
-          </div>
-          <p class="zone-desc">
-            This is where the landscape rushes to meet you. Featuring the high-intensity, short-duration thrills of Bungee Jump and the specialized maneuvers of Canopy Swoop and Speed Flying.
-          </p>
-          <a href="sports.html#bungee" class="btn-mini-explore">EXPLORE</a>
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="records-section">
-      
-      <div class="records-container">
-        
-        <div class="record-image-box">
-          <div class="glow-effect"></div>
-          <img src="assets/img/guinnes_2_11zon.webp" alt="Guinness World Record">
-        </div>
-
-        <div class="record-info">
-          <h2 class="record-title">WORLD <span class="highlight">RECORDS</span></h2>
-          <h3 class="record-subtitle">OFFICIAL RECOGNITION</h3>
-          
-          <p class="record-desc">
-            Pushing the boundaries of human flight requires precision, courage, and cutting-edge technology. We are proud holders of multiple world records, including the <strong>highest altitude wingsuit jump</strong> and the <strong>fastest horizontal flight speed</strong> achieved without propulsion.
+          <p>
+            His instructional approach blends technical detail with practical, scenario-based training. Calm,
+            knowledgeable, and highly observant, he is the type of instructor who supports each student’s progression
+            while emphasizing risk management.
           </p>
 
-          <div class="stats-grid">
-            <div class="stat-item">
-              <span class="stat-number">37,000</span>
-              <span class="stat-label">FEET</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">396</span>
-              <span class="stat-label">KM/H</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">04</span>
-              <span class="stat-label">RECORDS</span>
-            </div>
+          <a href="contact.html" class="btn-explore">EXPLORE</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="active-jumps-section">
+
+    <div class="tech-header">
+
+      <h2>ACTIVE JUMPS</h2>
+
+    </div>
+
+    <div class="jumps-container-border">
+
+      <article class="jump-zone">
+        <h3 class="zone-title">ZONE 01 - INITIATION</h3>
+        <div class="zone-img">
+          <img src="assets/img/cae3.webp" alt="Initiation Jump">
+        </div>
+        <p class="zone-desc">
+          This zone is reserved for the ultimate descent. We execute high-altitude freefalls from 15,000 feet, where the
+          air is thinner and the silence is absolute. Experience the raw, 60-second power of terminal velocity before
+          the canopy deployment.
+        </p>
+        <a href="sports.html#skydive" class="btn-mini-explore">EXPLORE</a>
+      </article>
+
+      <article class="jump-zone">
+        <h3 class="zone-title">ZONE 02 - VELOCITY</h3>
+        <div class="zone-img">
+          <img src="assets/img/cae4.webp" alt="Velocity Jump">
+        </div>
+        <p class="zone-desc">
+          Beyond the freefall, this is the realm of aerodynamic control. Disciplines here, such as Wingsuit and
+          high-performance Canopy Flight, are about transforming vertical speed into horizontal travel.
+        </p>
+        <a href="sports.html#wingsuit" class="btn-mini-explore">EXPLORE</a>
+      </article>
+
+      <article class="jump-zone">
+        <h3 class="zone-title">ZONE 03 - TERMINAL</h3>
+        <div class="zone-img">
+          <img src="assets/img/cae5.webp" alt="Terminal Jump">
+        </div>
+        <p class="zone-desc">
+          This is where the landscape rushes to meet you. Featuring the high-intensity, short-duration thrills of Bungee
+          Jump and the specialized maneuvers of Canopy Swoop and Speed Flying.
+        </p>
+        <a href="sports.html#bungee" class="btn-mini-explore">EXPLORE</a>
+      </article>
+
+    </div>
+
+  </section>
+
+  <section class="records-section">
+
+    <div class="records-container">
+
+      <div class="record-image-box">
+        <div class="glow-effect"></div>
+        <img src="assets/img/guinnes_2_11zon.webp" alt="Guinness World Record">
+      </div>
+
+      <div class="record-info">
+        <h2 class="record-title">WORLD <span class="highlight">RECORDS</span></h2>
+        <h3 class="record-subtitle">OFFICIAL RECOGNITION</h3>
+
+        <p class="record-desc">
+          Pushing the boundaries of human flight requires precision, courage, and cutting-edge technology. We are proud
+          holders of multiple world records, including the <strong>highest altitude wingsuit jump</strong> and the
+          <strong>fastest horizontal flight speed</strong> achieved without propulsion.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">37,000</span>
+            <span class="stat-label">FEET</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">396</span>
+            <span class="stat-label">KM/H</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">04</span>
+            <span class="stat-label">RECORDS</span>
           </div>
         </div>
-
       </div>
-    </section>
-    <footer class="site-footer">
+
+    </div>
+  </section>
+  <footer class="site-footer">
 
     <div class="footer-top">
       <h2 class="footer-brand">SKYLANDER</h2>
@@ -346,5 +370,8 @@
     </div>
 
   </footer>
-  </body>
+    <script src="script.js"></script>
+
+</body>
+
 </html>

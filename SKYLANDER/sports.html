@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skylander | Events</title>
-    <link rel="stylesheet" href="sports.css " />
+    <link rel="stylesheet" href="styles.css " />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,24 +15,36 @@
   <body class="sports-page">
     <header>
       <nav class="site-nav">
-        <a href="index.html" class="site-nav__brand">
-          <img
-            src="assets/img/logoblanco_7_11zon.webp"
-            alt="Logo"
-            class="site-nav__logo"
-          />
-          <div class="brand-text">
-            <span class="site-nav__word">SKYLANDER</span>
-          </div>
-        </a>
-
-        <div class="site-nav__menu">
-          <a href="index.html" class="nav-link">HOME</a>
-          <a href="sports.html" class="nav-link btn-highlight">SPORT</a>
-          <a href="events.html" class="nav-link">EVENTS</a>
-          <a href="contact.html" class="nav-link">CONTACT</a>
+      <a href="index.html" class="site-nav__brand">
+        <img src="assets/img/logoblanco_7_11zon.webp" alt="Logo" class="site-nav__logo" />
+        <div class="brand-text">
+          <span class="site-nav__word">SKYLANDER</span>
         </div>
-      </nav>
+      </a>
+
+      <div class="site-nav__menu desktop-only">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="sports.html" class="nav-link btn-highlight">SPORT</a>
+        <a href="events.html" class="nav-link">EVENTS</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </div>
+
+      <div class="navcollapse">
+        <div id="nav-icon">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="menu_mobile">
+      <ul class="menu_mobile_nav">
+        <li class="item"><a href="index.html"><span>HOME</span></a></li>
+        <li class="item"><a href="sports.html"><span>SPORTS</span></a></li>
+        <li class="item"><a href="events.html"><span>EVENTS</span></a></li>
+        <li class="item"><a href="contact.html"><span>CONTACT</span></a></li>
+      </ul>
+    </div>
     </header>
     <section class="sports-hero">
     <div class="hero-wrapper">
@@ -155,7 +167,7 @@
             </div>
 
             <div class="main-feature-image">
-                <img src="assets/img/sinfondo (2)_18_11zon.webp (2).png" alt="Skydiver Freefall Main">
+                <img src="assets/img/sinfondo (2)_18_11zon.webp" alt="Skydiver Freefall Main">
             </div>
         </div>
 
@@ -189,7 +201,7 @@
         <div class="top-content-alt">
             
             <div class="main-feature-image left-pos">
-                <img src="assets/img/sinfondo (3)_19_11zon.webp (3).png" alt="Paraglider Main">
+                <img src="assets/img/sinfondo (3)_19_11zon.webp" alt="Paraglider Main">
             </div>
 
             <div class="text-block right-pos">
@@ -251,7 +263,7 @@
             </div>
 
             <div class="main-feature-image">
-                <img src="assets/img/sinfondo (4)_20_11zon.webp (4).png" alt="Wingsuit Flyer Main">
+                <img src="assets/img/sinfondo (4)_20_11zon.webp" alt="Wingsuit Flyer Main">
             </div>
         </div>
 
@@ -279,7 +291,7 @@
         <div class="top-content-bungee">
             
             <div class="main-feature-image left-pos">
-                <img src="assets/img/sinfondo (5)_21_11zon.webp (5).png" alt="Bungee Jumper Main">
+                <img src="assets/img/sinfondo (5)_21_11zon.webp" alt="Bungee Jumper Main">
             </div>
 
             <div class="text-block right-pos">
@@ -386,5 +398,7 @@
     </div>
 
 </footer>
+  <script src="script.js"></script>
+
   </body>
 </html>

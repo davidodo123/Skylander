@@ -118,11 +118,9 @@ body {
     }
   }
 }
-
-/* --- HERO (Sin cambios) --- */
 .contact-hero {
   background-color: #000;
-  padding: 120px 0 60px;
+  padding: clamp(80px, 10vw, 120px) 0 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +128,8 @@ body {
   .hero-wrapper {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: clamp(15px, 4vw, 40px);
+
     .hero-title {
       font-family: var(--font-titles);
       font-size: clamp(40px, 8vw, 100px);
@@ -138,132 +137,133 @@ body {
       margin: 0;
       letter-spacing: 5px;
     }
+
     .hero-deco {
-      width: 80px;
+      width: clamp(40px, 6vw, 80px);
       height: auto;
+
       &.deco-flip {
         transform: scaleX(-1);
       }
     }
   }
 }
+
 .map-section {
-    position: relative;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  background-color: #000;
+  overflow: hidden;
+
+  img.map-bg {
+    display: block;
     width: 100%;
-    max-width: 1400px; 
-    margin: 0 auto 4rem;
-    background-color: #000;
-    overflow: hidden; 
+    height: auto;
+    opacity: 0.9;
+  }
 
-    img.map-bg {
-        display: block;
-        width: 100%;
-        height: auto; 
-        opacity: 0.9; 
+  .map-pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+
+    .pin-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #f12125, 0 0 20px #f12125;
+      position: relative;
+      z-index: 2;
     }
 
-    .map-pin {
+    .pin-pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background: rgba(241, 33, 37, 0.5);
+      border-radius: 50%;
+      animation: pulse-ring 2s infinite;
+      z-index: 1;
+    }
+
+    .pin-tooltip {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid #f12125;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: var(--font-text);
+      white-space: nowrap;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      backdrop-filter: blur(4px);
+
+      &::after {
+        content: '';
         position: absolute;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        z-index: 10;
-        
-        .pin-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #fff; 
-            border-radius: 50%;
-            box-shadow: 0 0 10px #f12125, 0 0 20px #f12125; 
-            position: relative;
-            z-index: 2;
-        }
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #f12125 transparent transparent transparent;
+      }
 
-        .pin-pulse {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 8px;
-            height: 8px;
-            background: rgba(241, 33, 37, 0.5);
-            border-radius: 50%;
-            animation: pulse-ring 2s infinite;
-            z-index: 1;
-        }
-
-        .pin-tooltip {
-            position: absolute;
-            bottom: 20px; 
-            left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            
-            background: rgba(0, 0, 0, 0.85);
-            border: 1px solid #f12125;      
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-family: var(--font-text);   
-            white-space: nowrap;             
-            text-align: center;
-            
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            pointer-events: none; 
-            backdrop-filter: blur(4px);
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                margin-left: -5px;
-                border-width: 5px;
-                border-style: solid;
-                border-color: #f12125 transparent transparent transparent;
-            }
-
-            strong {
-                color: #f12125; 
-                text-transform: uppercase;
-                font-size: 13px;
-            }
-        }
-
-        &:hover {
-            z-index: 20; 
-
-            .pin-dot {
-                transform: scale(1.2); 
-                background-color: #f12125;
-            }
-
-            .pin-tooltip {
-                opacity: 1;
-                visibility: visible;
-                transform: translateX(-50%) translateY(0); 
-            }
-        }
+      strong {
+        color: #f12125;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
     }
+
+    &:hover {
+      z-index: 20;
+
+      .pin-dot {
+        transform: scale(1.2);
+        background-color: #f12125;
+      }
+
+      .pin-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  }
 }
 
-/* ANIMACIÓN DEL LATIDO */
 @keyframes pulse-ring {
-    0% {
-        width: 8px;
-        height: 8px;
-        opacity: 0.8;
-    }
-    100% {
-        width: 40px; 
-        height: 40px;
-        opacity: 0;
-    }
+  0% {
+    width: 8px;
+    height: 8px;
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
 }
 
 /* =========================================
-   5. PANEL DE CONTACTO (FORM + INFO)
+   5. PANEL DE CONTACTO (FORM + INFO) - CORREGIDO
    ========================================= */
 .contact-panel {
     background: #000;
@@ -297,9 +297,10 @@ body {
         flex: 1;
         max-width: 1000px;
         display: grid;
-        grid-template-columns: 1fr 1px 1fr; 
+        grid-template-columns: 1fr 1px 1fr;
         gap: 50px;
-        align-items: start;
+        /* CAMBIO AQUÍ: 'center' para alinear verticalmente las dos columnas */
+        align-items: center; 
         
         .contact-divider {
             width: 1px;
@@ -325,7 +326,7 @@ body {
             width: 100%;
             background: #ffffff;
             border: none;
-            padding: 20px 25px; 
+            padding: 20px 25px;
             font-family: var(--font-body);
             font-size: 16px;
             color: #000;
@@ -359,7 +360,7 @@ body {
     .btn-send {
         background: var(--color-primary);
         color: #fff;
-        font-family: var(--font-display); 
+        font-family: var(--font-display);
         border: none;
         padding: 15px 0;
         width: 160px;
@@ -438,13 +439,15 @@ body {
     .social {
         padding-top: 40px;
         display: flex;
-        gap: 25px;
+        /* CAMBIO AQUÍ: Reducido de 25px a 15px para juntarlos */
+        gap: 15px; 
         align-items: center;
 
         .social__link {
             display: block;
-            width: 24px;
-            height: 24px;
+            /* CAMBIO AQUÍ: Aumentado de 24px a 36px para hacerlos más grandes */
+            width: 36px;
+            height: 36px;
             transition: transform 0.3s ease, filter 0.3s ease;
             
             img {
@@ -462,105 +465,140 @@ body {
     }
 }
 
-/* =========================================
-   6. FAQ SECTION
-   ========================================= */
 .faq-section {
-    background: #1a1a1a;
-    border-top: 1px solid #333;
-    color: #fff;
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+  color: #fff;
 
-    .faq-inner {
-        display: grid;
-        grid-template-columns: 1fr 400px;
-        max-width: 1400px;
-        margin: 0 auto;
-        min-height: 500px;
+  .faq-inner {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+
+  .faq-left {
+    padding: clamp(40px, 5vw, 60px) 5%;
+
+    .faq-title {
+      font-family: var(--font-body);
+      font-size: clamp(24px, 2.5vw, 32px);
+      margin-bottom: 40px;
+      font-weight: 400;
     }
 
-    .faq-left {
-        padding: 60px 5%;
-        
-        .faq-title {
-            font-family: var(--font-body);
-            font-size: 32px;
-            margin-bottom: 40px;
-            font-weight: 400;
+    .faq-box {
+      border: 1px solid var(--color-primary);
+      padding: clamp(20px, 3vw, 40px);
+      background: rgba(255, 255, 255, 0.03);
+
+      .faq-item {
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
         }
 
-        .faq-box {
-            border: 1px solid var(--color-primary);
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.03);
-            
-            .faq-item {
-                margin-bottom: 30px;
-                &:last-child { margin-bottom: 0; }
-                
-                .faq-q {
-                    display: flex;
-                    gap: 15px;
-                    font-family: var(--font-body);
-                    font-weight: 700;
-                    font-size: 16px;
-                    margin-bottom: 10px;
-                    align-items: baseline;
+        .faq-q {
+          display: flex;
+          gap: 15px;
+          font-family: var(--font-body);
+          font-weight: 700;
+          font-size: clamp(14px, 1.2vw, 16px);
+          margin-bottom: 10px;
+          align-items: baseline;
 
-                    .q-dot {
-                        width: 10px; height: 10px;
-                        background: var(--color-primary);
-                        border-radius: 50%;
-                        flex-shrink: 0;
-                    }
-                }
-
-                .faq-a {
-                    display: flex;
-                    gap: 15px;
-                    font-family: var(--font-body);
-                    color: #aaa;
-                    font-size: 14px;
-                    line-height: 1.6;
-                    margin-left: 25px;
-
-                    .a-square {
-                        width: 8px; height: 8px;
-                        background: var(--color-primary);
-                        flex-shrink: 0;
-                        margin-top: 6px;
-                        opacity: 0.8;
-                    }
-                }
-            }
+          .q-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+          }
         }
+
+        .faq-a {
+          display: flex;
+          gap: 15px;
+          font-family: var(--font-body);
+          color: #aaa;
+          font-size: clamp(13px, 1.1vw, 14px);
+          line-height: 1.6;
+          margin-left: 25px;
+
+          .a-square {
+            width: 8px;
+            height: 8px;
+            background: var(--color-primary);
+            flex-shrink: 0;
+            margin-top: 6px;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .faq-right {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .faq-deco {
+      position: absolute;
+      right: 30px;
+      top: 15%;
+      bottom: 15%;
+      width: 40px;
+      background: repeating-linear-gradient(-45deg,
+          var(--color-primary),
+          var(--color-primary) 10px,
+          transparent 10px,
+          transparent 20px);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+    .contact{
+  .contact-panel {
+    .deco-bar {
+      display: none;
+    }
+  }
+
+  .faq-section {
+    .faq-inner {
+      grid-template-columns: 1fr;
     }
 
     .faq-right {
-        position: relative;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .faq-deco {
-            position: absolute;
-            right: 30px;
-            top: 15%;
-            bottom: 15%;
-            width: 40px;
-            background: repeating-linear-gradient(
-                -45deg,
-                var(--color-primary),
-                var(--color-primary) 10px,
-                transparent 10px,
-                transparent 20px
-            );
-        }
+      order: -1;
+      height: 300px;
     }
+  }
+  }
 }
 
+@media (max-width: 768px) {
+  .contact-panel {
+    .contact-card {
+      grid-template-columns: 1fr;
+      gap: 30px;
+
+      .contact-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 1px;
+      }
+    }
+  }
+}
 /* =========================================
    7. FOOTER (ANIDADO Y CORREGIDO)
    ========================================= */
@@ -829,6 +867,7 @@ body {
     }
 
     /* Hero */
+    .contact-page{
     .contact-hero {
         padding-top: 160px;
         .contact-hero__title { font-size: 45px; }   
@@ -856,5 +895,6 @@ body {
         
         .faq-right { height: 300px; }
         .faq-left .faq-box { padding: 20px; }
+    }
     }
 }

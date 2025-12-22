@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skylander Contact</title>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +25,29 @@
         </div>
       </a>
 
-      <div class="site-nav__menu">
-        <a href="index.html" class="nav-link">HOME</a>
-        <a href="sports.html" class="nav-link">SPORT</a>
-        <a href="events.html" class="nav-link ">EVENTS</a>
+      <div class="site-nav__menu desktop-only">
+        <a href="index.html" class="nav-link ">HOME</a>
+        <a href="sports.html" class="nav-link ">SPORT</a>
+        <a href="events.html" class="nav-link">EVENTS</a>
         <a href="contact.html" class="nav-link btn-highlight">CONTACT</a>
       </div>
+
+      <div class="navcollapse">
+        <div id="nav-icon">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </nav>
+
+    <div class="menu_mobile">
+      <ul class="menu_mobile_nav">
+        <li class="item"><a href="index.html"><span>HOME</span></a></li>
+        <li class="item"><a href="sports.html"><span>SPORTS</span></a></li>
+        <li class="item"><a href="events.html"><span>EVENTS</span></a></li>
+        <li class="item"><a href="contact.html"><span>CONTACT</span></a></li>
+      </ul>
+    </div>
   </header>
 
   <section class="contact-hero">
@@ -258,6 +274,7 @@
     </div>
 
   </footer>
+  <script src="script.js"></script>
 
 </body>
 
