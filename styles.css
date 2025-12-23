@@ -2026,6 +2026,10 @@ body {
             margin: 0 auto 100px;
 
             .card {
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+
                 .card__img-container {
                     position: relative;
                     width: 100%;
@@ -2049,13 +2053,59 @@ body {
                         object-fit: cover;
                         object-position: top center;
                         position: relative;
-                        z-index: 2;
+                        z-index: 1;
                         transition: transform 0.4s ease;
+                    }
+
+                    .card__info-overlay {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: clamp(15px, 2vw, 25px);
+                        z-index: 5;
+
+                        /* AQUÍ ESTÁ EL CAMBIO */
+                        /* Gris oscuro (30,30,30) con 90% de opacidad (0.9) */
+                        background-color: rgba(30, 30, 30, 0.9);
+
+                        /* Opcional: Añade un desenfoque al fondo para mejorar la lectura */
+                        backdrop-filter: blur(4px);
+
+                        transform: translateY(101%);
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        display: flex;
+                        align-items: center;
+
+                        .info-text {
+                            color: #fff;
+                            font-family: var(--primary-red);
+                            font-size: clamp(14px, 1vw, 16px);
+                            line-height: 1.5;
+                            margin: 0;
+
+                            strong {
+                                color: var(--primary-red);
+                                font-weight: 700;
+                            }
+                        }
                     }
                 }
 
-                &:hover .card__pilot {
-                    transform: scale(1.05);
+                &:hover {
+                    .card__pilot {
+                        transform: scale(1.05);
+                    }
+
+                    .card__info-overlay {
+                        transform: translateY(0);
+                    }
+
+                    .card__arrow {
+                        transform: translateX(5px);
+                        background-color: var(--color-primary);
+                        border-color: var(--color-primary);
+                    }
                 }
 
                 .card__footer {
@@ -2070,22 +2120,40 @@ body {
 
                     .card__name {
                         font-family: var(--font-titles);
-                        font-size: 14px;
+                        font-size: clamp(12px, 1.2vw, 14px);
                         color: #fff;
                         letter-spacing: 1px;
                         padding-left: 10px;
                         position: relative;
 
-                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 3px;
+                            height: 12px;
+                            background-color: var(--color-primary);
+                        }
                     }
 
-                    .card__btn img {
-                        width: 20px;
-                        transition: transform 0.3s;
-                    }
+                    .card__arrow {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: clamp(30px, 3vw, 36px);
+                        height: clamp(30px, 3vw, 36px);
+                        border-radius: 50%;
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        transition: all 0.3s ease;
+                        margin-right: 10px;
 
-                    .card__btn:hover img {
-                        transform: translateX(5px);
+                        img {
+                            width: 50%;
+                            height: 50%;
+                            object-fit: contain;
+                        }
                     }
                 }
             }
@@ -2233,7 +2301,7 @@ body {
             .instructors-text p {
                 font-family: var(--font-body);
                 color: #cccccc;
-                font-size: clamp(0.9rem, 0.85rem + 0.2vw, 0.9375rem);
+                font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1rem);
                 line-height: 1.6;
                 margin-bottom: 25px;
             }
